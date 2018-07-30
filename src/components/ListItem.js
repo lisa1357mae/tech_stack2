@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import {Text, TouchableWithoutFeedback, View} from 'react-native';
+import {Text, TouchableWithoutFeedback, View, LayoutAnimation} from 'react-native';
 import {connect} from 'react-redux';
 import { CardSection } from './common';
 import * as actions from '../actions';
 
 class ListItem extends Component {
+  componentWillUpdate() {
+    LayoutAnimation.spring();
+  }
 renderDescription() {
   const {library, selectedLibraryId} = this.props;
   const { item } = library;
 
   if (item.id === selectedLibraryId)  {
     return (
+      <CardSection>
     <Text>{item.description}</Text>
+    </CardSection>
     );
   }
 }
@@ -44,7 +49,8 @@ const styles = {
   }
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
+
   return {selectedLibraryId: state.selectedLibraryId };
 };
 // the first argument must be mapState to props function, the second is to bind action creators to the component
