@@ -19,8 +19,8 @@ const styles = {
 
       borderWidth: 3,
       borderRadius: 5,
-      borderColor: 'black',
-      backgroundColor: 'black',
+      borderColor: 'purple',
+      backgroundColor: '#add',
       borderBottomWidth: 2,
       shadowColor: '#000',
       shadowOffset: { width: 0, height: 2 },
@@ -36,4 +36,4 @@ const styles = {
     }
 };
 
-export {Card};
+export default Card;

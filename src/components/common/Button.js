@@ -28,22 +28,21 @@ alignSelf: 'center',
 color: 'black',
 fontSize: 16,
 fontWeight: '600',
-paddingTop: 15,
-height: 35
+paddingTop: 10,
+paddingBottom: 10
 
 },
   buttonStyle: {
 
     flex: 1,
     alignSelf: 'stretch',
-    backgroundColor: '#cc6710',
+    backgroundColor: 'purple',
     borderRadius: 5,
     borderWidth: 1,
-    borderBottom: 5,
-    borderColor: 'black',
+    borderColor: '#add',
     marginLeft: 5,
-    marginRight: 5
+    barginRight: 5
   }
 }
 
-export { Button };
+export default Button;
